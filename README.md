@@ -2,7 +2,7 @@
 
 [中文文档](./README.zh.md)
 
-[Demo](https://www.yunyoujun.cn/yun/hexo-widget-tree.html)
+[Demo](https://www.yunyoujun.cn/yun/widget-tree.html)
 
 Tree preview widget for hexo.
 
