@@ -23,7 +23,7 @@ Click folder with `+` icon to expand menu. Click folder name will jump to catego
 
 - `cdn`: true, default use [jsdelivr CDN](https://cdn.jsdelivr.net/npm/hexo-widget-tree).
 - `hide`: false, automatically hide unless you move the mouse to the specified position.
-- `layout`: Which page will code snippets being injected. More info see [Injector](https://hexo.io/api/injector.html#to-lt-string-gt)
+- `layout`: Which page will code snippets being injected. More info see [Injector | hexo](https://hexo.io/api/injector.html#to-lt-string-gt).
 
 ```yaml
 widget_tree:
