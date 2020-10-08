@@ -6,7 +6,7 @@
 
 Tree preview widget for hexo.
 
-(If your theme support ajax, it can realize refreshless browsing)
+(If your theme supports ajax, it can achieve refreshless browsing)
 
 ## Usage
 
@@ -15,14 +15,14 @@ npm install hexo-widget-tree
 # yarn add hexo-widget-tree
 ```
 
-Click the button in the middle left of the page to expand the tree menu.
+Click the middle button on the left of the page to expand the "tree" menu.
 
-Click folder with `+` icon to expand menu. Click folder name will jump to category page.
+Click the folder with the `+` icon to expand the menu. By clicking the folder name, you will be redirect to category page.
 
 ## Options
 
-- `cdn`: true, default use [jsdelivr CDN](https://cdn.jsdelivr.net/npm/hexo-widget-tree).
-- `hide`: false, automatically hide unless you move the mouse to the specified position.
+- `cdn`: true, true by default [jsdelivr CDN](https://cdn.jsdelivr.net/npm/hexo-widget-tree).
+- `hide`: false, automatically hides unless you move the mouse to the middle of the left part of the page.
 - `layout`: Which page will code snippets being injected. More info see [Injector](https://hexo.io/api/injector.html#to-lt-string-gt)
 
 ```yaml
