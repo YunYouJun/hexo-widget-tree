@@ -2,14 +2,25 @@
  * 初始化挂件树
  */
 function initWidgetTree() {
-  const toggleIcons = document.querySelectorAll(".toggle-icon");
-  toggleIcons.forEach((toggleIcon) => {
-    toggleIcon.addEventListener("click", function () {
+  const togglePostIcons = document.querySelectorAll(".toggle-post-icon");
+  togglePostIcons.forEach((togglePostIcon) => {
+    togglePostIcon.addEventListener("click", function () {
       this.parentNode.classList.toggle("open");
       this.classList.toggle("gg-folder-add");
       this.classList.toggle("gg-folder-remove");
     });
   });
+
+  const toggleTocIcons = document.querySelectorAll(".toggle-toc-icon");
+  if (toggleTocIcons) {
+    toggleTocIcons.forEach((toggleTocIcon) => {
+      toggleTocIcon.addEventListener("click", function () {
+        this.parentNode.classList.toggle("open");
+        this.classList.toggle("gg-file-add");
+        this.classList.toggle("gg-file-remove");
+      });
+    });
+  }
 
   const widgetTreeButton = document.querySelector("#widget-tree-button");
   widgetTreeButton.addEventListener("click", function () {

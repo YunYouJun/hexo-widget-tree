@@ -170,6 +170,87 @@
   top: 4px;
 }
 
+.gg-file-add {
+  background: linear-gradient(to bottom, currentColor 5px, transparent 0) no-repeat 2px 9px/6px 2px;
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs, 1));
+  width: 14px;
+  height: 16px;
+  border: 2px solid transparent;
+  border-right: 0;
+  border-top: 0;
+  box-shadow: 0 0 0 2px;
+  border-radius: 1px;
+  border-top-right-radius: 4px;
+  overflow: hidden;
+}
+
+.gg-file-add::after,
+.gg-file-add::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  height: 6px;
+}
+
+.gg-file-add::before {
+  background: currentColor;
+  left: 4px;
+  width: 2px;
+  top: 7px;
+}
+
+.gg-file-add::after {
+  width: 6px;
+  border-left: 2px solid;
+  border-bottom: 2px solid;
+  right: -1px;
+  top: -1px;
+}
+
+.gg-file-remove {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs, 1));
+  width: 14px;
+  height: 16px;
+  border: 2px solid transparent;
+  border-right: 0;
+  border-top: 0;
+  box-shadow: 0 0 0 2px;
+  border-radius: 1px;
+  border-top-right-radius: 4px;
+  overflow: hidden;
+}
+
+.gg-file-remove::after,
+.gg-file-remove::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 6px;
+}
+
+.gg-file-remove::before {
+  background: currentColor;
+  left: 2px;
+  height: 2px;
+  top: 9px;
+}
+
+.gg-file-remove::after {
+  height: 6px;
+  border-left: 2px solid;
+  border-bottom: 2px solid;
+  right: -1px;
+  top: -1px;
+}
+
 #widget-tree {
   position: fixed;
   z-index: 1000;
@@ -203,7 +284,7 @@
 #widget-tree-button {
   position: fixed;
   z-index: 1001;
-  top: 48%;
+  top: 46%;
   left: 0rem;
   display: flex;
   background-color: #fcfcfc;
@@ -227,13 +308,15 @@
   left: 20rem;
 }
 
-.toggle-icon {
+.toggle-post-icon,
+.toggle-toc-icon {
   display: inline-block;
   vertical-align: -2px;
   margin-right: 5px;
   --ggs: 0.73;
 }
-.toggle-icon:hover {
+.toggle-post-icon:hover,
+.toggle-toc-icon:hover {
   color: dodgerblue;
   cursor: pointer;
 }
@@ -256,4 +339,19 @@
 .tree-list-item.open > .tree-list-children,
 .tree-list-children.open > .tree-list-children {
   display: block;
+}
+
+.tree-post-toc {
+  display: none;
+}
+
+.tree-list-item.open > .tree-post-toc {
+  display: block;
+}
+
+.tree-post-toc,
+.tree-post-toc-child {
+  list-style-type: none;
+  padding-left: 0.9rem;
+  font-size: 0.85rem;
 }

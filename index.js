@@ -27,10 +27,11 @@ const scriptTag = `<script src="${jsSrc}"></script>`;
 function insertToHtml(layout) {
   hexo.extend.generator.register("widget-tree", function (locals) {
     const generateList = listCategories.bind(hexo);
+    const options = config;
     hexo.extend.injector.register(
       "body_end",
       `<div id="widget-tree">
-      ${generateList(locals.categories)}
+      ${generateList(locals.categories, options)}
         <div id="widget-tree-button">
           <i class="gg-chevron-right"></i>
         </div>

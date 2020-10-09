@@ -39,7 +39,7 @@
 #widget-tree-button {
   position: fixed;
   z-index: 1001;
-  top: 48%;
+  top: 46%;
   left: 0rem;
   display: flex;
   background-color: #fcfcfc;
@@ -67,7 +67,8 @@
   }
 }
 
-.toggle-icon {
+.toggle-post-icon,
+.toggle-toc-icon {
   display: inline-block;
   vertical-align: -2px;
   margin-right: 5px;
@@ -101,4 +102,23 @@
       display: block;
     }
   }
+}
+// toc
+.tree-post-toc {
+  display: none;
+}
+
+.tree-list-item {
+  &.open {
+    > .tree-post-toc {
+      display: block;
+    }
+  }
+}
+
+.tree-post-toc,
+.tree-post-toc-child {
+  list-style-type: none;
+  padding-left: 0.9rem;
+  font-size: 0.85rem;
 }

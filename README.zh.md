@@ -24,11 +24,20 @@ npm install hexo-widget-tree
 - `cdn`: true, 默认使用 [jsdelivr CDN](https://cdn.jsdelivr.net/npm/hexo-widget-tree).
 - `hide`: false, 自动隐藏按钮（将鼠标放置于页面左边中间即可浮现触发按钮）
 - `layout`: 你想要插入的页面所属的布局类型。 更多信息见 [注入器（Injector） | hexo](https://hexo.io/zh-cn/api/injector.html#to-lt-string-gt)。
+- `toc`: 更多信息见[此处](https://hexo.io/zh-cn/docs/helpers#toc).
+  - `enable`: false，是否显示文章目录
 
 ```yaml
+# 你不是必须设置它们。若不设置，则使用默认配置。
 widget_tree:
   cdn: false
   hide: false
+  layout: default
+  toc:
+    enable: false
+    # max_depth:
+    # min_depth:
+    # list_number:
   # layout:
   #   - home
   #   - page
