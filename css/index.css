@@ -310,10 +310,11 @@
 
 .toggle-post-icon,
 .toggle-toc-icon {
+  color: black;
   display: inline-block;
-  vertical-align: -2px;
+  vertical-align: -3px;
   margin-right: 5px;
-  --ggs: 0.73;
+  --ggs: 0.75;
 }
 .toggle-post-icon:hover,
 .toggle-toc-icon:hover {
@@ -323,9 +324,9 @@
 
 .post-icon {
   display: inline-block;
-  vertical-align: -2px;
+  vertical-align: -3px;
   margin-right: 4px;
-  --ggs: 0.73;
+  --ggs: 0.75;
 }
 
 .tree-list-post-link {
@@ -336,6 +337,10 @@
 .tree-list-children .tree-list-children {
   display: none;
 }
+.tree-list-item.open > .toggle-post-icon,
+.tree-list-children.open > .toggle-post-icon {
+  color: dodgerblue;
+}
 .tree-list-item.open > .tree-list-children,
 .tree-list-children.open > .tree-list-children {
   display: block;
@@ -345,6 +350,9 @@
   display: none;
 }
 
+.tree-list-item.open > .toggle-toc-icon {
+  color: dodgerblue;
+}
 .tree-list-item.open > .tree-post-toc {
   display: block;
 }

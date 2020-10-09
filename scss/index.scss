@@ -1,5 +1,7 @@
 @import "./icon.scss";
 
+$list-active-color: dodgerblue;
+
 #widget-tree {
   position: fixed;
   z-index: 1000;
@@ -69,10 +71,11 @@
 
 .toggle-post-icon,
 .toggle-toc-icon {
+  color: black;
   display: inline-block;
-  vertical-align: -2px;
+  vertical-align: -3px;
   margin-right: 5px;
-  --ggs: 0.73;
+  --ggs: 0.75;
 
   &:hover {
     color: dodgerblue;
@@ -82,9 +85,9 @@
 
 .post-icon {
   display: inline-block;
-  vertical-align: -2px;
+  vertical-align: -3px;
   margin-right: 4px;
-  --ggs: 0.73;
+  --ggs: 0.75;
 }
 
 .tree-list-post-link {
@@ -98,6 +101,9 @@
   }
 
   &.open {
+    > .toggle-post-icon {
+      color: $list-active-color;
+    }
     > .tree-list-children {
       display: block;
     }
@@ -110,6 +116,9 @@
 
 .tree-list-item {
   &.open {
+    > .toggle-toc-icon {
+      color: $list-active-color;
+    }
     > .tree-post-toc {
       display: block;
     }
