@@ -1,5 +1,7 @@
 # hexo-widget-tree
 
+[![npm](https://img.shields.io/npm/v/hexo-widget-tree)](https://www.npmjs.com/package/hexo-widget-tree)
+
 [中文文档](./README.zh.md)
 
 [Demo](https://www.yunyoujun.cn/yun/widget-tree.html)
@@ -33,12 +35,12 @@ widget_tree:
   cdn: false
   hide: false
   layout: default
+  # layout:
+  #   - home
+  #   - page
   toc:
     enable: false
     # max_depth:
     # min_depth:
     # list_number:
-  # layout:
-  #   - home
-  #   - page
 ```

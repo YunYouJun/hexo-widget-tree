@@ -33,12 +33,12 @@ widget_tree:
   cdn: false
   hide: false
   layout: default
+  # layout:
+  #   - home
+  #   - page
   toc:
     enable: false
     # max_depth:
     # min_depth:
     # list_number:
-  # layout:
-  #   - home
-  #   - page
 ```

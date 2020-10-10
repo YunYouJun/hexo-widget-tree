@@ -1,4 +1,52 @@
 /**
+ * 切换文件夹图标
+ * @param {*} icon
+ */
+function toggleFolderIcon(icon) {
+  icon.classList.toggle("gg-folder-add");
+  icon.classList.toggle("gg-folder-remove");
+}
+
+/**
+ * 切换文章图标
+ * @param {*} icon
+ */
+function togglePostIcon(icon) {
+  icon.classList.toggle("gg-file-add");
+  icon.classList.toggle("gg-file-remove");
+}
+
+/**
+ * 展开文章上层文件夹
+ * @param {*} node
+ */
+function activePostLink(node) {
+  if (!node.classList.contains("open")) {
+    node.classList.add("open");
+    openFolder(node);
+  }
+  if (node.parentNode.parentNode.classList.contains("tree-list-item")) {
+    activePostLink(node.parentNode.parentNode);
+  }
+}
+
+/**
+ * 展开文件夹时，切换图标
+ * @param {*} node
+ */
+function openFolder(node) {
+  const icon = node.querySelector("i");
+  if (icon) {
+    if (icon.classList.contains("gg-folder-add")) {
+      toggleFolderIcon(icon);
+    }
+    if (icon.classList.contains("gg-file-add")) {
+      togglePostIcon(icon);
+    }
+  }
+}
+
+/**
  * 初始化挂件树
  */
 function initWidgetTree() {
@@ -6,8 +54,7 @@ function initWidgetTree() {
   togglePostIcons.forEach((togglePostIcon) => {
     togglePostIcon.addEventListener("click", function () {
       this.parentNode.classList.toggle("open");
-      this.classList.toggle("gg-folder-add");
-      this.classList.toggle("gg-folder-remove");
+      toggleFolderIcon(this);
     });
   });
 
@@ -16,8 +63,7 @@ function initWidgetTree() {
     toggleTocIcons.forEach((toggleTocIcon) => {
       toggleTocIcon.addEventListener("click", function () {
         this.parentNode.classList.toggle("open");
-        this.classList.toggle("gg-file-add");
-        this.classList.toggle("gg-file-remove");
+        togglePostIcon(this);
       });
     });
   }
@@ -50,30 +96,6 @@ function initWidgetTree() {
       activePostLink(postLink.parentNode);
     }
   });
-
-  function activePostLink(node) {
-    if (!node.classList.contains("open")) {
-      node.classList.add("open");
-      openFolder(node);
-    }
-    if (node.parentNode.parentNode.classList.contains("tree-list-item")) {
-      activePostLink(node.parentNode.parentNode);
-    }
-  }
-
-  function openFolder(node) {
-    const icon = node.querySelector("i");
-    if (icon) {
-      if (icon.classList.contains("gg-file-add")) {
-        icon.classList.toggle("gg-file-add");
-        icon.classList.toggle("gg-file-remove");
-      }
-      if (icon.classList.contains("gg-folder-add")) {
-        icon.classList.toggle("gg-folder-add");
-        icon.classList.toggle("gg-folder-remove");
-      }
-    }
-  }
 }
 
 document.addEventListener("DOMContentLoaded", initWidgetTree);
