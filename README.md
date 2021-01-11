@@ -44,3 +44,9 @@ widget_tree:
     # min_depth:
     # list_number:
 ```
+
+## Features
+
+- Adapt for dark mode
+
+You need `data-user-color-scheme="dark"` in parent node.

@@ -1,0 +1,21 @@
+:root {
+  --hwt-bg-color: #fcfcfc;
+  --hwt-text-color: black;
+  --hwt-active-color: dodgerblue;
+}
+
+@mixin dark {
+  --hwt-bg-color: #303030;
+  --hwt-text-color: #f2f2f2;
+  --hwt-active-color: #{lighten(dodgerblue, 20%)};
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    @include dark;
+  }
+}
+
+[data-user-color-scheme="dark"] {
+  @include dark;
+}

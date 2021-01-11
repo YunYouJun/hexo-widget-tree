@@ -1,12 +1,12 @@
 {
   "name": "hexo-widget-tree",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "description": "Tree preview widget for hexo.",
   "main": "index.js",
   "scripts": {
+    "build": "sass scss/index.scss css/index.css --no-source-map",
     "dev": "sass --watch scss/index.scss css/index.css --no-source-map",
-    "lint": "eslint .",
-    "prepublishOnly": "sass scss/index.scss css/index.css"
+    "prepublishOnly": "yarn build"
   },
   "repository": {
     "type": "git",
@@ -23,8 +23,6 @@
   },
   "homepage": "https://github.com/YunYouJun/hexo-widget-tree#readme",
   "devDependencies": {
-    "eslint": "^7.10.0",
-    "eslint-config-prettier": "^6.12.0",
     "hexo": "^5.2.0",
     "sass": "^1.26.12"
   }

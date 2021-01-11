@@ -92,7 +92,7 @@ function initWidgetTree() {
   postLinks.forEach((postLink) => {
     const pathname = new URL(postLink.href).pathname;
     if (pathname === document.location.pathname) {
-      postLink.style.color = "steelblue";
+      postLink.style.color = "var(--hwt-active-color)";
       activePostLink(postLink.parentNode);
     }
   });

@@ -1,0 +1,30 @@
+#widget-tree-button {
+  position: fixed;
+  z-index: 1001;
+  top: 46%;
+  left: 0rem;
+  display: flex;
+  background-color: var(--hwt-bg-color);
+  width: 1.5rem;
+  height: 3rem;
+  justify-content: flex-start;
+  align-items: center;
+
+  border-top-right-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+
+  transition: all 0.2s;
+  &:hover {
+    opacity: 1;
+    color: var(--hwt-active-color);
+  }
+
+  i {
+    margin-left: -2px;
+  }
+
+  &.open {
+    left: 20rem;
+  }
+}

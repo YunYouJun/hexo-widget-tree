@@ -42,3 +42,9 @@ widget_tree:
     # min_depth:
     # list_number:
 ```
+
+## Features
+
+- 适配暗色模式
+
+父节点标签中包含 `data-user-color-scheme="dark"` 属性。
