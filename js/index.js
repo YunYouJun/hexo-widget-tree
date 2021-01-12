@@ -47,6 +47,18 @@ function openFolder(node) {
 }
 
 /**
+ * 为 tocItems 补全链接
+ * @param {*} tocItems
+ * @param {string} pathname
+ */
+function addUrlForTocItem(tocItems, pathname) {
+  tocItems.forEach((tocItem) => {
+    const tocLink = tocItem.querySelector("a");
+    tocLink.href = pathname + new URL(tocLink.href).hash;
+  });
+}
+
+/**
  * 初始化挂件树
  */
 function initWidgetTree() {
@@ -78,22 +90,20 @@ function initWidgetTree() {
     icon.classList.toggle("gg-chevron-left");
   });
 
-  // modify toc link
-  const tocItems = document.querySelectorAll(".tree-post-toc-item");
-  if (tocItems) {
-    tocItems.forEach((tocItem) => {
-      const link = tocItem.parentNode.parentNode.querySelector("a").href;
-      const tocLink = tocItem.querySelector("a");
-      tocLink.href = link + new URL(tocLink.href).hash;
-    });
-  }
-
   const postLinks = document.querySelectorAll(".tree-list-post-link");
   postLinks.forEach((postLink) => {
     const pathname = new URL(postLink.href).pathname;
     if (pathname === document.location.pathname) {
       postLink.style.color = "var(--hwt-active-color)";
       activePostLink(postLink.parentNode);
+    }
+
+    // 帖子的兄弟节点（目录）
+    const postToc = postLink.nextElementSibling;
+    if (postToc) {
+      // modify toc link
+      const tocItems = postToc.querySelectorAll(".tree-post-toc-item");
+      addUrlForTocItem(tocItems, pathname);
     }
   });
 }
