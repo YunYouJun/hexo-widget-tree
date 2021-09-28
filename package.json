@@ -1,8 +1,13 @@
 {
   "name": "hexo-widget-tree",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Tree preview widget for hexo.",
   "main": "index.js",
+  "files": [
+    "css",
+    "js",
+    "lib"
+  ],
   "scripts": {
     "build": "sass scss/index.scss css/index.css --no-source-map",
     "dev": "sass --watch scss/index.scss css/index.css --no-source-map",
