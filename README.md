@@ -23,12 +23,12 @@ Click the folder with the `+` icon to expand the menu. By clicking the folder na
 
 ## Options
 
-- `cdn`: true, default [jsdelivr CDN](https://cdn.jsdelivr.net/npm/hexo-widget-tree).
-- `hide`: false, automatically hides unless you move the mouse to the middle of the left part of the page.
+- `cdn`: `true`, default [jsdelivr CDN](https://cdn.jsdelivr.net/npm/hexo-widget-tree).
+- `hide`: `false`, automatically hides unless you move the mouse to the middle of the left part of the page.
 - `layout`: Which page will code snippets being injected. More info see [Injector | hexo](https://hexo.io/api/injector.html#to-lt-string-gt).
 - `showCount`: Show number of posts in category.
 - `toc`: More info [here](https://hexo.io/docs/helpers#toc).
-  - `enable`: false, display toc for post
+  - `enable`: `false`, display toc for post
 
 ```yaml
 # You don't have to configure them.
