@@ -59,8 +59,14 @@
   --ggs: 0.75;
 }
 
-.tree-list-post-link {
-  font-size: 0.9rem;
+.tree-list {
+  &-post-link {
+    font-size: 0.9rem;
+  }
+
+  &-count {
+    float: right;
+  }
 }
 
 .tree-list-item,

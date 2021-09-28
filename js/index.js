@@ -25,8 +25,10 @@ function activePostLink(node) {
     node.classList.add("open");
     openFolder(node);
   }
-  if (node.parentNode.parentNode.classList.contains("tree-list-item")) {
-    activePostLink(node.parentNode.parentNode);
+
+  const treeListItemNode = node.parentNode.parentNode;
+  if (treeListItemNode.classList.contains("tree-list-item")) {
+    activePostLink(treeListItemNode);
   }
 }
 
