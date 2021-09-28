@@ -52,3 +52,23 @@ widget_tree:
 - Adapt for dark mode
 
 You need `data-user-color-scheme="dark"` in parent node.
+
+## Dev
+
+```bash
+git clone https://github.com/YunYouJun/hexo-widget-tree
+
+cd hexo-widget-tree
+# install dependencies
+npm install
+npm link
+
+# watch sass to compile
+npm run dev
+
+# start your hexo
+cd your-hexo-blog
+npm link hexo-widget-tree
+hexo s
+# We have to reload hexo server when plugin is modified.
+```
