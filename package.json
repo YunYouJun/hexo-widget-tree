@@ -1,6 +1,6 @@
 {
   "name": "hexo-widget-tree",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Tree preview widget for hexo.",
   "main": "index.js",
   "scripts": {
