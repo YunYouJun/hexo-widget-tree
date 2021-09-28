@@ -351,6 +351,9 @@
 .tree-list-post-link {
   font-size: 0.9rem;
 }
+.tree-list-count {
+  float: right;
+}
 
 .tree-list-item .tree-list-children,
 .tree-list-children .tree-list-children {
