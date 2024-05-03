@@ -2,7 +2,7 @@
 
 [English Docs](./README.md)
 
-[Demo](https://www.yunyoujun.cn/yun/widget-tree.html)
+[Demo](https://hexo-theme-yun.yunyoujun.cn/yun/widget-tree.html)
 
 Hexo 文章树状菜单预览插件
 
