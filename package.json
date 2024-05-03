@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/YunYouJun/hexo-widget-tree#readme",
   "devDependencies": {
-    "hexo": "^5.3.0",
-    "sass": "^1.42.1"
+    "hexo": "^7.2.0",
+    "sass": "^1.76.0"
   }
 }

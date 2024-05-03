@@ -22,10 +22,14 @@
     left: 0rem;
   }
 
+  > ul {
+    padding-right: 1rem;
+  }
+
   ul {
     list-style-type: none;
     margin: 0;
-    padding: 0 1rem;
+    padding-left: 1rem;
   }
 
   a {
@@ -90,6 +94,10 @@
 }
 
 .tree-list-item {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+
   &.open {
     > .toggle-toc-icon {
       color: var(--hwt-active-color);
