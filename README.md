@@ -4,7 +4,7 @@
 
 [中文文档](./README.zh.md)
 
-[Demo](https://hexo-theme-yun.yunyoujun.cn/yun/widget-tree.html)
+[Demo](https://hexo-theme-yun.yunyoujun.cn/posts/widget-tree/)
 
 Tree preview widget for hexo.
 
